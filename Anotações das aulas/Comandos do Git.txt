@@ -1,0 +1,13 @@
+Git -- version	Para verificar se instalou git no ubuntu
+Git status	Monitora o status do arquivo no GitHub
+Git add *	Pega tudo que foi modificado e adiciona no stage para comitar
+Git add .	Pega tudo que foi modificado e adiciona no stage para comitar
+Git commit -m "mensagem"	Pega todos os arquivos em stage envelopar em mensagem dando significância a ele e cria o objeto do git chamado commit
+Git push origin master	Empurra o código do seu ambiente local para o repositório remoto
+Git pull origin master	Puxa conteúdo que esta no local remoto(GitHub) para o local
+Git clone link	Clonar um código para sua maquina
+Git config --list	Acesso aos dados da conta no GitHub 
+Git config --global --unset user.email	Alterar dados do email
+Git config --global user.email	Novo email
+Git remote add origin link	Manda para o repositório remoto (link)
+Git remote -v	Lista os repositórios cadastrados
