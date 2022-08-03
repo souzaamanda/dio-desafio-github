@@ -6,3 +6,4 @@ Desafio de Projeto sobre Git/GitHub
 - JavaScript
 - FlexBox
 - TypeScript
+- React
