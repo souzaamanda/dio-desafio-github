@@ -13,7 +13,7 @@ function Profile() {
                     <h1>Amanda Souza</h1>
                     <S.WrapperUsername>
                         <h3>Username:</h3>
-                        <span>souzaamanda</span>
+                        <a href='https://github.com/souzaamanda' target='_blank' rel='noreferrer'>souzaamanda</a>
                     </S.WrapperUsername>
                 </div>
 

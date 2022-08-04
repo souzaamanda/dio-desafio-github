@@ -1,14 +1,16 @@
 import React from 'react';
 
+import * as S from './styled'
+
 //children vem das propiedades do componente Layout
 // criando um Layout que não muda, o conteudo dentro dele que vai ser dinamico
 
 function Layout({children}) {
     return(
-        <section>
+        <S.WrapperLayout>
             <header>header</header>
             {children}
-        </section>
+        </S.WrapperLayout>
     );
 }
 

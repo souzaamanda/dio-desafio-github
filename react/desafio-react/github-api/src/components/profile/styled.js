@@ -10,14 +10,25 @@ export const WrapperStatusCount = styled.div`
   display: flex;
   color: purple;
   align-items: center;
+  div {
+    margin: 8px;
+    text-align: center;
+  }
 `;
 
 export const WrapperUsername = styled.div`
   display: flex;
   color: blue;
   align-items: center;
+  margin-top: 8px;
   h3 {
     margin-right: 8px;
+  }
+
+  a {
+    color: pink;
+    font-weight: bold;
+    font-size: 18px;
   }
 `;
 
@@ -27,6 +38,19 @@ export const WrapperInfo = styled.div`
   align-items: flex-start;
   flex-direction: column;
   margin-left: 8px;
+  height: 200px;
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
 `;
 
 export const WrapperImg = styled.img`
