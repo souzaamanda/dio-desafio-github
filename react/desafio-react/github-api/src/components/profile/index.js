@@ -1,8 +1,11 @@
 import React from 'react';
+import useGithub from '../../hooks/github-hooks';
 // importando tudo do arquivo styled e passando para S, então tduoo que tiver o S. estará vindo do styled component 
 import * as S from './styled'
 
 function Profile() {
+
+    const { githubState} = useGithub()
     return (
         <S.Wrapper>
             
@@ -10,7 +13,7 @@ function Profile() {
 
             <S.WrapperInfo>
                 <div>
-                    <h1>Amanda Souza</h1>
+                    <h1>{githubState.user.name} </h1>
                     <S.WrapperUsername>
                         <h3>Username:</h3>
                         <a href='https://github.com/souzaamanda' target='_blank' rel='noreferrer'>souzaamanda</a>
