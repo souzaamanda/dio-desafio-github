@@ -19,8 +19,8 @@ function Header () {
     return (
         <header>
             <S.Wrapper>
-                <input type='text' placeholder="digite aqui" onChange={submitGetUser}/>
-                <button type="submit">Buscar</button>
+                <input type='text' placeholder="digite aqui" onChange={(event) => setUsernameForSearch(event.target.value)}/>
+                <button type="submit" onClick={submitGetUser}>Buscar</button>
             </S.Wrapper>
 
         </header>

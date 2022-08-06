@@ -16,7 +16,7 @@ export const WrapperStatusCount = styled.div`
   }
 `;
 
-export const WrapperUsername = styled.div`
+export const WrapperUserGeneric = styled.div`
   display: flex;
   color: blue;
   align-items: center;

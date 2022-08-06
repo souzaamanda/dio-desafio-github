@@ -11,8 +11,10 @@ export const GithubContext = createContext ({
 function GithubProvider({children}) {
 
     const [githubState, setGithubState] = useState({
+        hasUser: false,
         loading: false,
         user:{
+            avatar: undefined,
             login: undefined,
             name: undefined,
             html_url: undefined,
@@ -30,25 +32,41 @@ function GithubProvider({children}) {
 
     //criando função que vai consumir API
     const getUser = (username) => {
+
+        //quando iniciar a requisição será alterado o valor de loading para 'true'
+        setGithubState((prevState) => ({
+            ...prevState,
+            loading: !prevState.loading
+        }));
+
         //montando request / $parametro dinâmico que vem através da função/ prevState pega o estado anterior do useState / user: recebe os dados do useState
-        //({data: {user}}) não entendi!
-        api.get(`user/${username}`).then( ({data: {user}}) => {
+        api.get(`users/${username}`).then( ({data}) => {
+
+            //console.log(data);
+
             setGithubState(prevState => ({
                 ...prevState,
+                hasUser: true,
                 user:{
-                    login: user.login,
-                    name: user.name,
-                    html_url: user.html_url,
-                    blog: user.blog,
-                    company:user.company,
-                    location: user.location,
-                    followers: user.followers,
-                    following: user.following,
-                    public_gists: user.public_gists,
-                    public_repos: user.public_repos,
+                    avatar: data.avatar_url,
+                    login: data.login,
+                    name: data.name,
+                    html_url: data.html_url,
+                    blog: data.blog,
+                    company: data.company,
+                    location: data.location,
+                    followers: data.followers,
+                    following: data.following,
+                    public_gists: data.public_gists,
+                    public_repos: data.public_repos,
             }}))
+        }).finally(() =>{ //loading voltando para 'false' quando finalizar
+            setGithubState((prevState) =>({
+                ...prevState,
+                loading: !prevState.loading,
+            }))
         })
-    }
+    };
 
     //useCallback((username) => getUser(username), []) Não entendi!!
     const contextValue = {
