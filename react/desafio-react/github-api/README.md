@@ -5,3 +5,5 @@
 - api do github
 - axios
 - styled-components
+- Hooks
+- Consumindo API do GitHub
